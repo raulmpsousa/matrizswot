@@ -26,7 +26,7 @@ export const App = () => {
       if (errorMessage.includes("API key not valid") || errorMessage.includes("permission denied") || errorMessage.includes("User location is not supported")) {
           setError("Falha na API: Verifique se sua chave é válida, pertence a um projeto do Google Cloud com faturamento ativado e se sua região é suportada. Chaves gratuitas do AI Studio podem não funcionar com este modelo.");
       } else if (errorMessage.includes("API_KEY não configurada")) {
-          setError("Configuração incompleta: A chave de API não foi encontrada. Configure a variável de ambiente VITE_API_KEY no Netlify.");
+          setError("Configuração incompleta: A chave de API não foi encontrada. Configure a variável de ambiente API_KEY no Netlify.");
       } else {
           setError('Falha ao gerar a análise SWOT. Verifique sua conexão e tente novamente.');
       }
