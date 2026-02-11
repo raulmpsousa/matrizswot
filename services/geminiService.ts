@@ -3,10 +3,8 @@ import { GoogleGenAI, Type } from "@google/genai";
 import { UserInput, SWOTAnalysisResult } from '../types';
 
 export const generateSWOTAnalysis = async (userInput: UserInput): Promise<SWOTAnalysisResult> => {
-  // FIX: API key must be obtained exclusively from `process.env.API_KEY`.
   const apiKey = process.env.API_KEY;
   if (!apiKey) {
-    // FIX: Updated error message to reflect the correct environment variable.
     throw new Error("API_KEY não configurada.");
   }
 
